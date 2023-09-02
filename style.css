@@ -1,0 +1,120 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@100;200;300;400;500;600;700&family=Luckiest+Guy&display=swap');
+
+
+*{
+    box-sizing: border-box;
+}
+
+@keyframes appear{
+    from {
+        opacity: 0;
+    } to {
+        opacity: 1;
+    }
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 'IBM Plex Mono', monospace;
+    background-color: #140e3c;
+    line-height: 1.5;
+    color: #ffffff;
+
+    height: 700vh;
+}
+
+main{
+    opacity: 0;
+    animation: appear .4s ease forwards;
+}
+
+.progress{
+    /* visibility: hidden; */
+    position: fixed;
+    top: .5rem;
+    right: 0.5rem;
+    pointer-events: none;
+    z-index: 1;
+    font-family: 'Luckiest Guy', cursive;
+}
+
+h1, h2, h3, h4, h5, h6{
+    margin: 0;
+}
+
+header{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 2rem;
+}
+
+header svg{
+    max-height: 300px;
+}
+
+h1{
+    margin: 32px 0 0 0;
+    text-align: center;
+}
+
+section.house {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+
+    padding: 2rem;
+}
+
+section.house svg{
+    max-width: 100%;
+}
+
+header, section{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+section.scene {
+    
+}
+
+section.scene img{
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 700vh;
+    max-width: none;
+}
+
+section.house svg{
+    height: 90vh;
+}
+
+svg g#scene{
+    opacity: 1;
+    transition: opacity .25s;
+}
+
+svg:hover g#scene{
+    opacity: 0.25;
+}
+
+div.label{
+    background-color: #fff;
+    color: #140e3c;
+    padding: 8px 16px;
+
+    position: fixed;
+    visibility: hidden;
+    pointer-events: none;
+}
